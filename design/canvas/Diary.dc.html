@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Marayika — Diary</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&amp;family=Inter:wght@400;500&amp;family=Caveat:wght@500;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&amp;display=swap">
+<style>
+body{margin:0;background:#FBFAF6}
+a{color:#141414}a:hover{color:#BA2924}
+summary::-webkit-details-marker{display:none}
+:focus-visible{outline:2.5px solid #BA2924;outline-offset:3px}
+.lift{transition:transform .25s ease, box-shadow .25s ease}
+.lift:hover{transform:rotate(0deg) translate(-3px,-4px) !important;box-shadow:9px 10px 0 #141414 !important}
+.card{transition:transform .2s ease, box-shadow .2s ease}
+.card:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 #BA2924 !important}
+@media (prefers-reduced-motion: reduce){.lift,.card{transition:none}}
+</style>
+</helmet>
+<div style="position: relative; min-height: 100vh; color: #141414; font-family: Inter, system-ui, sans-serif; font-size: 17px; line-height: 1.6; background-color: #FBFAF6; background-image: linear-gradient(#E6E2D8 1px, transparent 1px), linear-gradient(90deg, #E6E2D8 1px, transparent 1px); background-size: 28px 28px; overflow: hidden">
+
+<div aria-hidden="true" style="position: absolute; top: 0; bottom: 0; left: 28px; width: 2px; background: {{accent}}; opacity: 0.55"></div>
+
+<header style="max-width: 1180px; margin: 0 auto; padding: 28px 40px 0 56px; display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; align-items: center">
+<a href="Main.dc.html" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 26px; letter-spacing: -0.03em; text-decoration: none; padding: 6px 0">marayika<span style="color: {{accent}}">.</span></a>
+<details style="position: relative">
+<summary aria-label="Menu" style="list-style: none; cursor: pointer; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border: 1.5px solid #141414; background: #FFFFFF; box-shadow: 3px 3px 0 #141414"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
+<nav aria-label="Main" style="position: absolute; right: 0; top: calc(100% + 10px); z-index: 20; min-width: 240px; background: #FFFFFF; border: 1.5px solid #141414; box-shadow: 4px 4px 0 #141414; display: flex; flex-direction: column">
+<a href="Portfolio.dc.html" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 20px; text-decoration: none; border-bottom: 1px solid #141414; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.01em">Portfolio</a>
+<a href="Diary.dc.html" aria-current="page" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 20px; text-decoration: none; border-bottom: 1px solid #141414; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.01em">Diary<span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: {{accent}}"></span></a>
+<a href="SoftEpilogue.dc.html" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 20px; text-decoration: none; border-bottom: 1px solid #141414; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.01em">Soft Epilogue</a>
+<a href="Contact.dc.html" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 20px; text-decoration: none; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.01em">Contact</a>
+</nav>
+</details>
+</header>
+
+<main style="max-width: 1180px; margin: 0 auto; padding: 64px 40px 72px 56px; display: flex; flex-direction: column; gap: 72px">
+
+<section style="display: flex; flex-direction: column; gap: 18px">
+<p style="margin: 0; font-family: Caveat, cursive; font-weight: 700; font-size: 34px; color: {{accent}}; transform: rotate(-2deg); transform-origin: left">a few pages from my diary&nbsp;—</p>
+<h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(72px, 11vw, 150px); line-height: 0.88; letter-spacing: -0.05em">diary<span style="color: {{accent}}">.</span></h1>
+<p style="margin: 8px 0 0; max-width: 560px; font-family: 'Bricolage Grotesque', sans-serif; font-size: 26px; line-height: 1.28; letter-spacing: -0.01em">Poetry, essays, <span style="background: linear-gradient(transparent 62%, #F4CFC9 62%); white-space: nowrap">images and memory.</span></p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; padding-top: 6px"><button type="button" onClick="{{ fAll }}" aria-pressed="{{ onAll }}" style="{{ sAll }}">All</button><button type="button" onClick="{{ fPoetry }}" aria-pressed="{{ onPoetry }}" style="{{ sPoetry }}">Poetry</button><button type="button" onClick="{{ fEssay }}" aria-pressed="{{ onEssay }}" style="{{ sEssay }}">Essays</button><button type="button" onClick="{{ fGallery }}" aria-pressed="{{ onGallery }}" style="{{ sGallery }}">Gallery</button></div>
+</section>
+
+<section aria-label="Featured pieces" style="display: flex; flex-direction: column; border-top: 2px solid #141414">
+<sc-if value="{{ showGallery }}" hint-placeholder-val="{{ true }}"><div data-category="Gallery" class="entry" style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 28px 56px; padding: 48px 0; border-bottom: 1px dashed #9A958C; color: #141414">
+<figure class="lift" style="margin: 0; flex: 1 1 340px; max-width: 540px; min-width: 0; position: relative; background: #FFFFFF; padding: 12px 12px 14px; border: 1.5px solid #141414; box-shadow: 5px 5px 0 #141414; transform: rotate(-1.2deg)">
+<div aria-hidden="true" style="position: absolute; top: -13px; left: 50%; margin-left: -48px; width: 96px; height: 26px; background: rgba(226, 214, 186, 0.85); transform: rotate(-3deg)"></div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px"><img src="/_blob/6b300253d86713e38fee5e43a3534cac" alt="Illustration, frame one: two dancers in draped cloth on a green and yellow checkerboard, a woman with a woven basket on her head and a man, arms raised toward each other" style="display: block; width: 100%; height: auto"><img src="/_blob/dfc07c65af28139ca8122a37cf943248" alt="Frame two: the dancers&#x27; arms shift, his drawn closer to his body" style="display: block; width: 100%; height: auto"><img src="/_blob/f3e19f5f560a20939882e1426a9a0e07" alt="Frame three: both dancers lift their arms high, side by side" style="display: block; width: 100%; height: auto"></div>
+<figcaption style="padding-top: 10px; font-family: Caveat, cursive; font-weight: 500; font-size: 22px; text-align: center">three frames, one dance</figcaption>
+</figure>
+<div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 18px; color: {{accent}}">01</span><span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #5A564F">Gallery</span></p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: clamp(26px, 3vw, 36px); line-height: 1.1; letter-spacing: -0.02em">Imbyino y’urukundo</h2>
+<p style="margin: 0; max-width: 520px; font-family: Newsreader, Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.45; color: #3D3A35">I imagine love through lovers’ body movements inspired by inyambo.</p>
+</div>
+</div></sc-if>
+<sc-if value="{{ showEssay }}" hint-placeholder-val="{{ true }}"><a href="https://marayika.substack.com/p/now-you-are-a-witness-i-place-this" data-category="Essay" class="entry" style="display: flex; flex-direction: row-reverse; flex-wrap: wrap; align-items: center; gap: 28px 56px; padding: 48px 0; border-bottom: 1px dashed #9A958C; text-decoration: none; color: #141414">
+<div class="lift" style="flex: 1 1 340px; max-width: 540px; min-width: 0; position: relative; background: #FFFFFF; padding: 12px 12px 14px; border: 1.5px solid #141414; box-shadow: 5px 5px 0 #141414; transform: rotate(1.4deg)">
+<div aria-hidden="true" style="position: absolute; top: -13px; left: 50%; margin-left: -48px; width: 96px; height: 26px; background: rgba(226, 214, 186, 0.85); transform: rotate(-3deg)"></div>
+<img src="/_blob/173a404fc4a21a803e78b905e61b0a90" alt="Illustration of a small bird resting on two open hands" style="display: block; width: 100%; height: auto">
+</div>
+<div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 18px; color: {{accent}}">02</span><span style="font-family: Caveat, cursive; font-weight: 700; font-size: 26px; line-height: 1; color: {{accent}}">23 November 2026</span><span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #5A564F">Essay</span></p>
+<h2 style="margin: 0; display: flex; gap: 14px; justify-content: space-between; align-items: flex-start; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: clamp(26px, 3vw, 36px); line-height: 1.1; letter-spacing: -0.02em">Now, you are a witness. I place this bird in your hands.<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" style="flex: none; margin-top: 6px"><path d="M6 18c3.8-4 7.6-8 11.6-11.8M9 6.4c2.9-.2 5.8-.3 8.6-.2.2 2.8.2 5.6 0 8.4"/></svg></h2>
+<p style="margin: 0; max-width: 520px; font-family: Newsreader, Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.45; color: #3D3A35">It is beautiful that I get to see you across the mountains and the oceans. Now, what do I do with all that seeing?</p>
+</div>
+</a></sc-if>
+<sc-if value="{{ showEssay }}" hint-placeholder-val="{{ true }}"><a href="https://marayika.substack.com/p/lets-eat-so-we-can-eat-again" data-category="Essay" class="entry" style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 28px 56px; padding: 48px 0; border-bottom: 1px dashed #9A958C; text-decoration: none; color: #141414">
+<div class="lift" style="flex: 1 1 340px; max-width: 540px; min-width: 0; position: relative; background: #FFFFFF; padding: 12px 12px 14px; border: 1.5px solid #141414; box-shadow: 5px 5px 0 #141414; transform: rotate(-1.2deg)">
+<div aria-hidden="true" style="position: absolute; top: -13px; left: 50%; margin-left: -48px; width: 96px; height: 26px; background: rgba(226, 214, 186, 0.85); transform: rotate(-3deg)"></div>
+<img src="/_blob/fc43a0d41a19d5ef543292fc46c81868" alt="Illustration of a woven basket and a bowl of potato wedges on a striped cloth" style="display: block; width: 100%; height: auto">
+</div>
+<div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 18px; color: {{accent}}">03</span><span style="font-family: Caveat, cursive; font-weight: 700; font-size: 26px; line-height: 1; color: {{accent}}">27 October 2026</span><span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #5A564F">Essay</span></p>
+<h2 style="margin: 0; display: flex; gap: 14px; justify-content: space-between; align-items: flex-start; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: clamp(26px, 3vw, 36px); line-height: 1.1; letter-spacing: -0.02em">Let’s eat so we can eat again<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" style="flex: none; margin-top: 6px"><path d="M6 18c3.8-4 7.6-8 11.6-11.8M9 6.4c2.9-.2 5.8-.3 8.6-.2.2 2.8.2 5.6 0 8.4"/></svg></h2>
+<p style="margin: 0; max-width: 520px; font-family: Newsreader, Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.45; color: #3D3A35">On being hungry for life, and a lesson from my five-year-old niece.</p>
+</div>
+</a></sc-if>
+<sc-if value="{{ showEssay }}" hint-placeholder-val="{{ true }}"><a href="https://marayika.substack.com/p/your-pan-african-boyfriend-wants" data-category="Essay" class="entry" style="display: flex; flex-direction: row-reverse; flex-wrap: wrap; align-items: center; gap: 28px 56px; padding: 48px 0; border-bottom: 1px dashed #9A958C; text-decoration: none; color: #141414">
+<div class="lift" style="flex: 1 1 340px; max-width: 540px; min-width: 0; position: relative; background: #FFFFFF; padding: 12px 12px 14px; border: 1.5px solid #141414; box-shadow: 5px 5px 0 #141414; transform: rotate(1.4deg)">
+<div aria-hidden="true" style="position: absolute; top: -13px; left: 50%; margin-left: -48px; width: 96px; height: 26px; background: rgba(226, 214, 186, 0.85); transform: rotate(-3deg)"></div>
+<img src="/_blob/87dace042d1f1f8ace658b454e923634" alt="Title card reading: Your pan-African boyfriend wants to decolonize the continent in a missionary position." style="display: block; width: 100%; height: auto">
+</div>
+<div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 18px; color: {{accent}}">04</span><span style="font-family: Caveat, cursive; font-weight: 700; font-size: 26px; line-height: 1; color: {{accent}}">25 September 2026</span><span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #5A564F">Essay</span></p>
+<h2 style="margin: 0; display: flex; gap: 14px; justify-content: space-between; align-items: flex-start; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: clamp(26px, 3vw, 36px); line-height: 1.1; letter-spacing: -0.02em">Your pan-African boyfriend wants to decolonize the continent in a missionary position.<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" style="flex: none; margin-top: 6px"><path d="M6 18c3.8-4 7.6-8 11.6-11.8M9 6.4c2.9-.2 5.8-.3 8.6-.2.2 2.8.2 5.6 0 8.4"/></svg></h2>
+<p style="margin: 0; max-width: 520px; font-family: Newsreader, Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.45; color: #3D3A35">I would argue that the “pan-African man” is probably the most misogynistic man you will ever meet.</p>
+</div>
+</a></sc-if>
+<sc-if value="{{ showPoetry }}" hint-placeholder-val="{{ true }}"><a href="https://marayika.substack.com/p/we-might-as-well-fall-in-love" data-category="Poetry" class="entry" style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 28px 56px; padding: 48px 0; border-bottom: 1px dashed #9A958C; text-decoration: none; color: #141414">
+<div class="lift" style="flex: 1 1 340px; max-width: 540px; min-width: 0; position: relative; background: #FFFFFF; padding: 12px 12px 14px; border: 1.5px solid #141414; box-shadow: 5px 5px 0 #141414; transform: rotate(-1.2deg)">
+<div aria-hidden="true" style="position: absolute; top: -13px; left: 50%; margin-left: -48px; width: 96px; height: 26px; background: rgba(226, 214, 186, 0.85); transform: rotate(-3deg)"></div>
+<img src="/_blob/97a49a8981f65d5c44ada826143edfe9" alt="Title card reading: We might as well fall in love" style="display: block; width: 100%; height: auto">
+</div>
+<div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 18px; color: {{accent}}">05</span><span style="font-family: Caveat, cursive; font-weight: 700; font-size: 26px; line-height: 1; color: {{accent}}">13 September 2026</span><span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #5A564F">Poetry</span></p>
+<h2 style="margin: 0; display: flex; gap: 14px; justify-content: space-between; align-items: flex-start; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: clamp(26px, 3vw, 36px); line-height: 1.1; letter-spacing: -0.02em">We might as well fall in love<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" style="flex: none; margin-top: 6px"><path d="M6 18c3.8-4 7.6-8 11.6-11.8M9 6.4c2.9-.2 5.8-.3 8.6-.2.2 2.8.2 5.6 0 8.4"/></svg></h2>
+<p style="margin: 0; max-width: 520px; font-family: Newsreader, Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.45; color: #3D3A35">Twenty poems on love and the stubborn argument for staying alive.</p>
+</div>
+</a></sc-if>
+</section>
+<sc-if value="{{ noneShown }}" hint-placeholder-val="{{ false }}"><p data-empty-note style="margin: -40px 0 0; font-family: Caveat, cursive; font-weight: 700; font-size: 30px; color: #8A857C">nothing on this shelf yet — soon.</p></sc-if>
+
+<section aria-label="Get new pages by email" style="position: relative; margin-top: 24px; background-color: #FFFFFF; background-image: repeating-linear-gradient(transparent 0 31px, #EDE6D8 31px 32px); border: 1.5px solid #141414; box-shadow: 6px 6px 0 #141414; padding: 96px clamp(24px, 4vw, 48px) 40px; display: flex; flex-wrap: wrap; align-items: center; gap: 32px 56px">
+<div aria-hidden="true" style="position: absolute; top: -22px; left: clamp(20px, 4vw, 48px); width: 78px; height: 94px; background: #FBFAF6; border: 2px dashed {{accent}}; outline: 6px solid #FBFAF6; transform: rotate(-4deg); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px">
+<img src="/_blob/2a3e4c2dcbd99e741154e7b3fbaba235" alt="" style="display: block; width: 62px; height: 62px; object-fit: cover">
+<span style="font-family: Caveat, cursive; font-weight: 700; font-size: 15px; line-height: 1; color: {{accent}}">Kigali</span>
+</div>
+<div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: Caveat, cursive; font-weight: 700; font-size: clamp(32px, 4vw, 42px); line-height: 1.05; color: {{accent}}; transform: rotate(-2deg); transform-origin: left">get new pages by email&nbsp;—</p>
+<p style="margin: 0; max-width: 420px; font-family: Newsreader, Georgia, serif; font-style: italic; font-size: 20px; line-height: 1.5; color: #3D3A35">When a new page is ready, it comes to you like a letter.</p>
+</div>
+<div style="flex: 1 1 320px; max-width: 460px; min-width: 0; background: #FFFFFF; border: 1.5px solid #141414">
+<form data-substack-embed action="https://marayika.substack.com/subscribe" method="get" style="display: flex; flex-wrap: wrap; gap: 10px; padding: 18px 12px"><label for="sub-email" style="flex-basis: 100%; font-size: 14px; color: #5A564F">Your email</label><input id="sub-email" type="email" name="email" placeholder="you@example.com" style="flex: 1 1 200px; min-width: 0; padding: 14px 16px; border: 1.5px solid #141414; font: inherit; font-size: 16px; background: #FBFAF6"><button type="submit" style="padding: 14px 22px; border: 0; background: #BA2924; color: #FFFFFF; font: inherit; font-weight: 600; cursor: pointer">Subscribe</button></form>
+</div>
+</section>
+</main>
+
+<footer style="max-width: 1180px; margin: 0 auto; padding: 0 40px 40px 56px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; color: #5A564F">
+<p style="margin: 0">© 2026 marayika · Kigali, Rwanda</p>
+<a href="Main.dc.html" style="color: #141414">← Back to home</a>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#BA2924","options":["#BA2924","#2E5B3A","#628981","#141414"]},"$preview":{"width":1440,"height":1250}}'>
+class Component extends DCLogic {
+renderVals() {
+const f = (this.state && this.state.filter) || 'all';
+const counts = { Poetry: 1, Essay: 3, Gallery: 1 };
+const base = 'border: 1.5px solid #141414; border-radius: 999px; padding: 8px 18px; font: inherit; font-size: 14px; cursor: pointer; ';
+const st = (k) => base + (f === k ? 'background: #141414; color: #FBFAF6' : 'background: #FFFFFF; color: #141414');
+const pick = (k) => () => this.setState({ filter: k });
+const show = (k) => f === 'all' || f === k;
+return {
+accent: this.props.accent ?? '#BA2924',
+fAll: pick('all'), fPoetry: pick('Poetry'), fEssay: pick('Essay'), fGallery: pick('Gallery'),
+onAll: f === 'all' ? 'true' : 'false', onPoetry: f === 'Poetry' ? 'true' : 'false', onEssay: f === 'Essay' ? 'true' : 'false', onGallery: f === 'Gallery' ? 'true' : 'false',
+sAll: st('all'), sPoetry: st('Poetry'), sEssay: st('Essay'), sGallery: st('Gallery'),
+showPoetry: show('Poetry'), showEssay: show('Essay'), showGallery: show('Gallery'),
+noneShown: f !== 'all' && counts[f] === 0
+};
+}
+}
+</script>
+</body>
+</html>
