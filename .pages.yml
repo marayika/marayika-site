@@ -1,0 +1,53 @@
+media:
+  input: src/media
+  output: /media
+  categories: [image]
+
+content:
+  - name: diary
+    label: Diary
+    type: collection
+    path: src/diary/posts
+    filename: "{year}-{month}-{day}-{title}.md"
+    exclude: [posts.11tydata.js]
+    view:
+      fields: [title, category, date]
+      sort: [date]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: link
+        label: Link to the piece (Substack or anywhere else; leave empty for Gallery work)
+        type: string
+      - name: subtitle
+        label: Subtitle (one line under the title)
+        type: string
+      - name: date
+        label: Date
+        type: date
+        options:
+          format: yyyy-MM-dd
+      - name: category
+        label: Type
+        type: select
+        default: Essay
+        options:
+          values: [Poetry, Essay, Gallery]
+      - name: cover
+        label: Cover image (optional)
+        type: image
+      - name: cover_alt
+        label: Describe the image(s) (for screen readers)
+        type: string
+      - name: images
+        label: Gallery images (for Gallery pieces; up to 3 show side by side)
+        type: image
+        list: true
+      - name: note
+        label: Handwritten caption under the images (optional)
+        type: string
