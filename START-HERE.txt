@@ -1,74 +1,58 @@
-MARAYIKA.COM — HOW TO PUT THE SITE ONLINE
-==========================================
+MARAYIKA.COM — HOW YOUR WEBSITE WORKS
+=====================================
 
-You do this once. It takes about 30 minutes.
-You need three free accounts: GitHub, Netlify and Pages CMS (you sign in to Pages CMS with GitHub).
+Your site is live at https://marayika.com
 
+Where everything lives
+----------------------
+- Domain: Canva (marayika.com). Renews yearly in Canva.
+- Website files: GitHub, repository marayika/marayika-site (public).
+- Hosting: GitHub Pages. Free, no badge.
+- Diary editor: Pages CMS, app.pagescms.org (sign in with GitHub).
+- Email: hello@marayika.com, through Google. Not affected by the website.
 
-STEP 1 — Put the files on GitHub
---------------------------------
-1. Go to github.com and create a free account.
-2. Click "New repository". Name it marayika-site. Keep it Private. Click "Create repository".
-3. Click "uploading an existing file".
-4. Unzip this folder on your computer. Open it, select everything inside, and drag it onto the GitHub page.
-5. Click "Commit changes".
-6. Check the file list. You should see a file called .pages.yml.
-   If it is missing, click "Add file" > "Create new file", name it .pages.yml,
-   and paste in the text from pages-cms-settings-copy.txt.
+Every change you save on GitHub or in Pages CMS rebuilds the site.
+It is live about one minute later.
 
 
-STEP 2 — Build the site on Netlify
-----------------------------------
-1. Go to netlify.com and sign up with your GitHub account.
-2. Click "Add new site" > "Import an existing project" > GitHub.
-3. Pick marayika-site. Netlify reads the settings from the files. Click "Deploy".
-4. Wait about one minute. Netlify gives you a temporary address. Open it and check the site.
-
-
-STEP 3 — Connect marayika.com (in Canva)
-----------------------------------------
-Your visitors never see the word Netlify once this is done.
-
-1. In Netlify: Site configuration > Domain management > "Add a domain". Type marayika.com.
-2. In Canva: open your domain settings > DNS records. Do NOT change the nameservers.
-   That keeps your hello@marayika.com email working.
-3. Edit the A record with host "@". Change its value to:   75.2.60.5
-4. Add or edit a CNAME record with host "www". Set its value to your Netlify address,
-   for example:   marayika-site.netlify.app
-5. Back in Netlify, set marayika.com as the primary domain.
-6. Wait. DNS changes can take a few hours. Netlify adds the padlock (https) by itself.
-
-
-STEP 4 — Set up your Diary editor
----------------------------------
+ADD A DIARY PIECE
+-----------------
 1. Go to app.pagescms.org and sign in with GitHub.
-2. Allow it to access marayika-site.
-3. Open the repository. You will see "Diary" in the menu.
-
-
-HOW TO ADD A DIARY PIECE
-------------------------
-1. In Pages CMS, open Diary and click "Add an entry".
-2. Fill in:
+2. Open marayika-site, then Diary, then "Add an entry".
+3. Fill in:
    - Title
    - Link: the Substack (or other) address of the piece. Leave it empty for Gallery work.
    - Subtitle: one line under the title.
    - Date
    - Type: Poetry, Essay or Gallery.
    - Cover image, and a short description of it.
-   - Gallery pieces only: add up to 3 images and an optional handwritten caption.
-3. Click Save. The site updates itself in about a minute.
+   - Gallery pieces only: up to 3 images and an optional handwritten caption.
+4. Click Save.
 
-To edit or delete a piece, open it in the Diary list and change it.
-The newest pieces show first. The numbers (01, 02…) and the alternating layout happen on their own.
+The newest pieces show first. Numbers and the alternating layout happen on their own.
+Saving publishes. Keep unfinished drafts somewhere else.
 
 
-BEFORE YOU LAUNCH, CHECK
-------------------------
+CHANGE TEXT ON OTHER PAGES
+--------------------------
+1. Go to github.com/marayika/marayika-site
+2. Open src, then the page folder (portfolio, soft-epilogue, contact),
+   or src/index.html for Home.
+3. Open index.html and click the pencil icon.
+4. Change the words between the tags. Leave everything inside < > alone.
+5. Click "Commit changes".
+
+
+DO NOT CHANGE IN CANVA
+----------------------
+Canva > Settings > Web domains > marayika.com > Advanced settings:
+- A records "@": 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
+- CNAME "www": marayika.github.io
+- MX, SPF and DKIM records: your email. Never delete them.
+Keep "Connected to Canva" switched off.
+
+
+CHECK NOW AND THEN
+------------------
 - Google Drive: the free library folder is shared as "Anyone with the link can view".
-- Substack: the subscribe box on the Diary page loads once the site is live.
-- Every button: Instagram, LinkedIn, X, Substack, email.
-
-
-Other pages (Home, Portfolio, Soft Epilogue, Contact) are fixed pages.
-To change their text, ask for help or edit the index.html file inside each folder in src/.
+- The domain renews in Canva every November.
